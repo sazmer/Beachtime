@@ -1,0 +1,114 @@
+
+
+table, td, th
+{
+    border:1px solid black;
+       
+}
+th
+{
+    background-color:#3a4761;
+    color:white;
+
+}
+
+#winTable{
+    margin: 0 auto;
+    width: 300px;
+}
+table {
+
+min-width: 300px;
+}
+#matchResults {
+    min-height: 200px;
+min-width:500px;
+}
+
+#allDatabase {
+    float:left;
+    
+}
+#thisRound {
+    float:left;
+}
+#restingContainer{
+    width:250px;
+    text-align:center;
+    float:left;
+    margin-left: 40px;
+    
+}
+
+#willRest{
+    clear:both;
+    float:right;
+    margin-bottom: 20px;
+}
+#matchingContainer{
+    border: black solid 1px;
+   
+    float:left;
+    margin: 20px;
+}
+#addplayerFieldset{
+    width: 250px;
+    float:left;
+    margin-top:20px;
+}
+#buttonsRight{
+    float:right;
+    margin: 30px;
+    margin-right: 100px;
+    
+}
+#fieldsLeft{
+    float:left;
+    margin-left: 60px;
+    margin-top: 10px;
+} 
+.par1{
+    
+}
+.fieldSet{
+    min-width: 250px;
+    clear:none;
+    float: left;
+    text-align: center;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+.radioDiv{
+    margin-left:30px;
+    float:left;
+    margin-top: 10px;
+}
+.winText{
+    margin-left:10px;
+     margin-top: 17px; 
+    float:left;
+}
+#rest {
+    
+    width: 250px;
+}
+#day{
+    width: 250px;
+}
+#all{
+    width: 250px;
+}
+.arrowButtons{
+    float:left;
+    margin-left:10px;
+    margin-right:10px;
+    margin-top: 170px;
+    margin-bottom: 10px;
+}
+.arrowRight {
+    clear:both;
+    float:right;
+    margin-top:10px;
+     margin-right:100px;
+}

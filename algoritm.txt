@@ -1,0 +1,38 @@
+m1
+m2
+m3
+m4
+
+f1
+f2
+f3
+f4
+
+function stableMatching {
+    Initialize all m ? M and w ? W to free --- sätta en variabel till ledig för denna match, vilande väljes innan
+    while ? free man m who still has a woman w to propose to { --- while males i malearray
+       w = m's highest ranked such woman to whom he has not yet proposed ---- hur kolla vilka han friat till? della ur array
+	   
+			den bästa tjej som han ännu inte friat till
+       if w is free
+         (m, w) become engaged   - förlovade -> hur löses det?
+       else some pair (m', w) already exists  -- om hon redan är förlovad, är den gamla bättre än den nya killen?
+													går det att lösa med timesPlayed  i session?
+         if w prefers m to m'
+           (m, w) become engaged
+           m' becomes free
+         else
+           (m', w) remain engaged
+    }
+}
+
+killar friar till alla tjejer oavsett - en efter en
+om partner byts så läggs tjejen tillbaka
+
+smaller friar till alla bigger - loopa igenom en efter en
+förlovas med en bigger -> körs igen, om bättre bigger lägg tillbaka gamla bigger
+nästa smaller friar till alla bigger - om denna är en bättre match -> lägg tillbaka gamla smaller igen
+
+Den här algoritmen verkar inte hålla - den går inte att köra tills alla är nöjda..
+
+Kanske lägga in en preferensarray där man inför varje matchning kollar vilka par som finns och timesPlayed -> lägger dem längst ner bland preferenserna

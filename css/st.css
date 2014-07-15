@@ -1,0 +1,43 @@
+/* 
+    Document   : newCascadeStyleSheet
+    Created on : May 29, 2013, 9:45:15 PM
+    Author     : samuel
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+table{
+text-align: left;
+}
+thead{
+    display: block;
+}
+
+thead th{  
+    width: 100px;
+
+}
+thead th:first-child{
+    width: 20px;
+    padding-right: 20px;
+}
+tbody{
+
+    height: 120px;
+    display: block;
+    overflow: auto;
+}
+tbody td{
+    width: 110px;
+}
+
+tbody td:first-child{
+    width: 20px;
+    padding-right: 20px;
+}
+tbody td:last-child{
+    display:none;
+}
