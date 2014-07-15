@@ -21,7 +21,7 @@ if (login_check($mysqli) == true) {
 		<META NAME="description" CONTENT="Time for beachvolleyball? Time for BeachTime!">
 		<link rel="shortcut icon" href="favicon.ico" >
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
-		<link rel="stylesheet" href="css/style.css?version=232432444221411">
+		<link rel="stylesheet" href="css/style.css?version=2324324442222221411">
 		<link rel="stylesheet" href="css/TimeCircles.css" >
 		<link rel="stylesheet" href="css/themes/beachTheme.css?122" />
 		<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
@@ -30,7 +30,7 @@ if (login_check($mysqli) == true) {
 		<!--        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>-->
 		<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
 		<script type="text/javascript" src="js/TimeCircles.js"></script>
-		<script type="text/javascript" src="js/main.js?222241111212211212111222222221222"></script>
+		<script type="text/javascript" src="js/main.js?1223235"></script>
 		<script type="text/javascript" src="js/statistik.js?11111221121122"></script>
 		<script type="text/javascript" src="js/adminScript.js?5243444433342444221"></script>
 		<script type="text/javascript" src="js/sha512.js"></script>
@@ -50,15 +50,15 @@ if (login_check($mysqli) == true) {
 						<input placeholder="Lösenord" type="password" name="password" id="password"/>
 						<br />
 
-						<a data-role="button" value="Registrera" href="#register">Registrera</a>
-						<input data-theme="b" class="logButton" id="submitButton" type="submit" action="submit" value="Logga in" />
+						<a data-role="button" value="Registrera" href="#register">Register</a>
+						<input data-theme="b" class="logButton" id="submitButton" type="submit" action="submit" value="Login" />
 					</form>
 					<p  id="newUser"></p>
 				</div>
 			</div><!-- /content -->
 
 			<div class="ui-bar-b" data-theme="a" data-role="footer"  data-id="persistent" data-position="fixed">
-				<h4>Inloggning</h4>
+				<h4>BeachTime</h4>
 			</div>
 		</div>
 		<div data-role="page" id="register">
@@ -67,22 +67,22 @@ if (login_check($mysqli) == true) {
 			</div>
 			<div data-role="content">
 				<div class="logRegDiv">
-					<form data-ajax="false"  class="regInner" name="registerForm" action="http://www.beachtime.se/register.php" method="post" onsubmit="formhash(document.forms['registerForm'], document.forms['registerForm'].password);">
-						<input placeholder="Användarnamn" type="text" name="user" />
-						<input placeholder="Email" type="text" name="email" />
+					<form autocomplete="off" data-ajax="false"  class="regInner" id="registerForm" name="registerForm" action="#">
+						<input autocomplete="off" placeholder="Username" type="text" id="regUser" />
+						<input autocomplete="off" placeholder="Email" type="text" id="regEmail" />
+						
+						<input autocomplete="off" placeholder="Password" type="password" name="password" id="regPassword"/>
 						<input type="text" name="fakeN" style="display:none">
-						<input type="password" name="fakeP" style="display:none">
-						<input placeholder="Lösenord" type="password" name="password" id="password"/>
-						<br />
+						<input type="password" name="fakeP" id="regPass" style="display:none">
 
-						<a type="button" value="Avbryt" href="#login">Avbryt</a>
-						<input data-theme="b" class="logButton"  type="submit" action="submit" value="Skapa användare" />
+						<a data-role="button" value="Avbryt" href="#login">Cancel</a>
+						<input data-role="button" data-theme="b" class="logButton"  type="submit" action="submit" value="Register" />
 					</form>
 				</div>
 			</div><!-- /content -->
 
 			<div data-theme="a" data-role="footer"  data-id="persistent" data-position="fixed">
-				<h4>Inloggning</h4>
+				<h4>Register</h4>
 			</div>
 		</div>
 
@@ -519,7 +519,7 @@ if (login_check($mysqli) == true) {
 
 		<div id="editSession" data-role="page" data-transition="pop">
 			<div data-role="header">
-				<h1>Sessioner</h1>
+				<h1>Sessions</h1>
 			</div>
 			<div data-role="content">
 				<a href="" id="newSessionLink" data-role="button">Create session</a>

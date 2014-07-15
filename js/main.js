@@ -12,21 +12,14 @@ var toast = function(msg) {
 		$(this).remove();
 	});
 };
-//Planering:
-//Kunna ändra spelarnas nummer själv
-//Separat tabell för spelare/session
-//Boll + klocka för splash+icon
-//Klocka -> ställa in tid för matcherna
-//Admin -> välja om tid eller ej
-//youtube instruktionsfilm
-//plocka ihop en egen konstellation och lotta resten
-//Inga usernames längre än 13 bokstäver
+
 function onBodyLoad() {
 	$("#login_form").on("submit", function(e) {
 		e.preventDefault();
 		//        $("#submitButton", this).attr("disabled", "disabled");
 		var p = formhash(document.forms['login_form'], document.forms['login_form'].password);
 		var u = $("#mail").val();
+		console.log(p);
 
 		$.post("loginscr.php", {
 			username : u,
@@ -37,13 +30,121 @@ function onBodyLoad() {
 					transition : "flip"
 				});
 			} else {
-
+				if (res == "nActive") {
+					toast("Your account is not yet activated. Please check your email.");
+				} else {
+					toast("Login failed. Please check your account information");
+				}
 				console.log(res);
 				//                navigator.notification.alert("Your login failed", function() {
 				//                });
 			}
 		});
 	});
+	$("#registerForm").on("submit", function(e) {
+		e.preventDefault();
+		console.log(e);
+		console.log($('#regPassword').val());
+		console.log(document.forms['registerForm'].password);
+		console.log(checkStrength(document.forms['registerForm'].password.value, $('#regPassword')));
+		if (checkStrength($('#regPassword').val(), $('#regPassword')) < 2) {
+			toast("Password to weak.");
+		} else {
+
+			var p = formhash(document.forms['registerForm'], document.forms['registerForm'].password);
+			var u = $("#regUser").val();
+			var e = $("#regEmail").val();
+			console.log(p);
+			console.log(u);
+			console.log(e);
+			$.ajax({
+				url : 'register.php',
+				data : {
+					username : u,
+					password : p,
+					email : e
+				},
+				dataType : 'json',
+			}).then(function(res) {
+				console.log(res);
+				if (res == "registered") {
+					toast("Activation email sent, please check your email.");
+					$.mobile.pageContainer.pagecontainer("change", "index.php", {
+					transition : "flip"
+					});
+				} else {
+					console.log(res);
+					toast(res);
+					var out = "";
+					$.each(res, function(i, obj) {
+						out += obj;
+					});
+					toast(out);
+				}
+			});
+
+		}
+
+	});
+	$('#regPassword').keyup(function() {
+		checkStrength($('#regPassword').val(), $('#regPassword'));
+	});
+
+	/*
+	 checkStrength is function which will do the
+	 main password strength checking for us
+	 */
+
+	function checkStrength(password, input) {
+		//initial strength
+		var strength = 0;
+
+		//if the password length is less than 6, return message.
+		if (password.length < 6) {
+			input.removeClass();
+			input.addClass('short');
+			return strength;
+		}
+
+		//length is ok, lets continue.
+
+		//if length is 8 characters or more, increase strength value
+		if (password.length > 7)
+			strength += 1
+
+		//if password contains both lower and uppercase characters, increase strength value
+		if (password.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/))
+			strength += 1
+
+		//if it has numbers and characters, increase strength value
+		if (password.match(/([a-zA-Z])/) && password.match(/([0-9])/))
+			strength += 1
+
+		//if it has one special character, increase strength value
+		if (password.match(/([!,%,&,@,#,$,^,*,?,_,~])/))
+			strength += 1
+
+		//if it has two special characters, increase strength value
+		if (password.match(/(.*[!,%,&,@,#,$,^,*,?,_,~].*[!,%,&,@,#,$,^,*,?,_,~])/))
+			strength += 1
+
+		//now we have calculated strength value, we can return messages
+console.log(strength);
+		//if value is less than 2
+		if (strength < 2) {
+			input.removeClass();
+			input.addClass('weak');
+			return strength;
+		} else if (strength == 2) {
+			input.removeClass();
+			input.addClass('good');
+			return strength;
+		} else {
+			input.removeClass();
+			input.addClass('strong');
+			return strength;
+		}
+	}
 
 	function formhash(form, password) {
 		// Create a new element input, this will be our hashed password field.

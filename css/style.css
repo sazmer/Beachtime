@@ -304,7 +304,20 @@ width: 50% !important;
     font-size: 1em;
 }
 
-
+/* password colors registration */
+.short{
+	background-color: #DE957E !important;
+}
+.weak{
+	background-color: #F2F1A0 !important;
+}
+.good{
+	background-color: #A0CDF2 !important;
+}
+.strong{
+	background-color: #87C47C !important;
+}
+/* END password colors registration END */
 
 ::-webkit-input-placeholder { text-align: center; text-transform: uppercase; font-size: 14px;}
 

@@ -99,14 +99,7 @@ if (login_check($mysqli) == true) {
 	$courts = $_SESSION['courts'];
 	$restingThisRound = array();
 
-	//Prioritera vila jämnt. Aldrig vila 2
-	//Egen db till anv?
-	//snygga till vanliga interfacet
-	//
-	//
-	//opponent history - hur många gånger har man mött den på andra sidan?
-	//Fler steg tillbaka i framtiden?
-	//hur gör man om det är ex 3 över av ett kön som vilar varje gång? ska det nån gång bli ett eget lag av dom?
+
 	//
 	if ($prioRest)
 		$restersRemoved = doRestPrioRest($thisRound, $courts);
@@ -250,18 +243,7 @@ function splitSameSex($pairArray, $prioRest) {
 
 	return $result;
 }
-/*
- * Sortera paren så man inte får möta samma
- * Lägg ihop paren i en match-array
- * 
- * 
- */ 
- function pairMatching($pairs){
- 	
-	
-	
-	
- }
+
 function doMatches($pairs, $prioRest) {
 
 	$matchArray = array();
@@ -613,15 +595,15 @@ function doRest($femArray, $malArray, $playerArray, $courts) {
 
 	return $willBePlaying;
 }
-/*
- * Göra par från de utvalda spelarna. 
-  */
- 
+
 function doPairsAux($sex1, $sex2, $playerArray, $numPairs) {
 	$i = 0;
 	foreach ($sex1 as $sex1Player) {
 		$foundMatch = false;
-		//Går igenom ena könet (males) och kollar om paret spelat förut
+		//if($i>$numPairs){
+		//    break;
+		//}
+		//Går igenom malesen och kollar om paret spelat förut
 		foreach ($sex2 as $i => $sex2Player) {
 			if (!isset($sex1Player -> history[$sex2[$i] -> id])) {
 

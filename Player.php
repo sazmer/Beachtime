@@ -20,9 +20,10 @@ class Player {
     public $rested_last;
     public $winratio;
     public $same_sex;
+	public $pair_history;
     public function __construct($id_, $firstname_, $lastname_, $gender_,
             $wins_ = 0, $played_games_ = 0,$todays_wins_ = 0, $boardNumber_ = NULL, $rest_ = 0, 
-            $history_ = array(), $rested_last_ = 0, $winratio = 0, $same_sex_=0) {
+            $history_ = array(), $rested_last_ = 0, $winratio = 0, $same_sex_=0, $pair_history_ = array()) {
         $this->id = $id_;
         $this->firstname = $firstname_;
         $this->lastname = $lastname_;
@@ -35,6 +36,7 @@ class Player {
         $this->todays_wins = $todays_wins_;
          $this->rested_last = $rested_last_;
          $this->same_sex = $same_sex_;
+		 $this->pair_history = $pair_history_;
     }
 
     public function getGender() {
