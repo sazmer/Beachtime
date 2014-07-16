@@ -12,7 +12,13 @@ var toast = function(msg) {
 		$(this).remove();
 	});
 };
+$(document).ajaxStart(function() {
+    $.mobile.loading('show');
+});
 
+$(document).ajaxStop(function() {
+    $.mobile.loading('hide');
+});
 function onBodyLoad() {
 	$("#login_form").on("submit", function(e) {
 		e.preventDefault();
@@ -740,7 +746,7 @@ $(document).ready(function() {
 				chosen : 'new'
 			},
 			success : function(data) {
-				toast("Sessionen satt till <br>" + data);
+				toast("Session: <br>" + data);
 				getSessionName();
 			}
 		});
@@ -754,7 +760,7 @@ $(document).ready(function() {
 					chosen : choose
 				},
 				success : function(data) {
-					toast("Sessionen satt till <br>" + data);
+					toast("Session: <br>" + data);
 					getSessionName();
 					newSessionSet = true;
 				}
@@ -1100,7 +1106,7 @@ $(document).ready(function() {
 			returnera = data.toString();
 			$(".sessionDisp").empty();
 			if (data == "") {
-				$(".sessionDisp").append("Välj en session eller skapa ny");
+				$(".sessionDisp").append("Select or create new session");
 			} else {
 				$(".sessionDisp").append(returnera);
 				sessionSet = true;

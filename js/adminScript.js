@@ -112,7 +112,7 @@ var loadPlayerList = function() {
         {
             $("#mainPlayerList").empty();
             $.each(playerList, function(index, player) {
-                $("#mainPlayerList").append('<li><a href="" id="player' + player[0] + '" class="editLink">' + player[1] + ' ' + player[2] + '</a></li>');
+                $("#mainPlayerList").append('<li><a class="ui-icon-user" href="" id="player' + player[0] + '" class="editLink">' + player[1] + ' ' + player[2] + '</a></li>');
             });
             $("#mainPlayerList").listview("refresh", false);
         }

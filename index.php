@@ -20,17 +20,19 @@ if (login_check($mysqli) == true) {
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<META NAME="description" CONTENT="Time for beachvolleyball? Time for BeachTime!">
 		<link rel="shortcut icon" href="favicon.ico" >
+
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
-		<link rel="stylesheet" href="css/style.css?version=2324324442222221411">
+		<link rel="stylesheet" href="css/style.css?version=21221111">
 		<link rel="stylesheet" href="css/TimeCircles.css" >
-		<link rel="stylesheet" href="css/themes/beachTheme.css?122" />
 		<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+		<link rel="stylesheet" href="css/themes/orange.css?12122" />
+
 		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 
 		<!--        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>-->
 		<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
 		<script type="text/javascript" src="js/TimeCircles.js"></script>
-		<script type="text/javascript" src="js/main.js?1223235"></script>
+		<script type="text/javascript" src="js/main.js?1223212135"></script>
 		<script type="text/javascript" src="js/statistik.js?11111221121122"></script>
 		<script type="text/javascript" src="js/adminScript.js?5243444433342444221"></script>
 		<script type="text/javascript" src="js/sha512.js"></script>
@@ -38,16 +40,19 @@ if (login_check($mysqli) == true) {
 	</head>
 	<body onload="onBodyLoad()">
 		<div data-role="page" id="login">
-			<div data-theme="b" data-role="header" data-id="persistent" data-position="fixed">
-				<h1>BeachTime</h1>
-			</div>
+			<!-- <div data-theme="b" data-role="header" data-id="persistent" data-position="fixed">
+			<h1>BeachTime</h1>
+
+			</div> -->
 			<div data-role="content">
+				<img src="img/logosandglas.png?12" class="mainLogo">
 				<div class="logRegDiv">
+
 					<p id="errorText"></p>
 					<form class="logInner" data-ajax="false" id="login_form"  action="" method="post"  name="login_form">
 
 						<input placeholder="Email" type="text" id="mail" name="email" />
-						<input placeholder="Lösenord" type="password" name="password" id="password"/>
+						<input placeholder="Password" type="password" name="password" id="password"/>
 						<br />
 
 						<a data-role="button" value="Registrera" href="#register">Register</a>
@@ -57,20 +62,20 @@ if (login_check($mysqli) == true) {
 				</div>
 			</div><!-- /content -->
 
-			<div class="ui-bar-b" data-theme="a" data-role="footer"  data-id="persistent" data-position="fixed">
-				<h4>BeachTime</h4>
-			</div>
+			<!-- <div class="ui-bar-b" data-theme="a" data-role="footer"  data-id="persistent" data-position="fixed">
+			<h4 data-theme="c">BeachTime</h4>
+			</div> -->
 		</div>
 		<div data-role="page" id="register">
-			<div data-theme="b" data-role="header" data-id="persistent" data-position="fixed">
-				<h1>BeachTime</h1>
-			</div>
+			<!-- <div data-theme="b" data-role="header" data-id="persistent" data-position="fixed">
+			<h1>BeachTime</h1>
+			</div> -->
 			<div data-role="content">
 				<div class="logRegDiv">
 					<form autocomplete="off" data-ajax="false"  class="regInner" id="registerForm" name="registerForm" action="#">
 						<input autocomplete="off" placeholder="Username" type="text" id="regUser" />
 						<input autocomplete="off" placeholder="Email" type="text" id="regEmail" />
-						
+
 						<input autocomplete="off" placeholder="Password" type="password" name="password" id="regPassword"/>
 						<input type="text" name="fakeN" style="display:none">
 						<input type="password" name="fakeP" id="regPass" style="display:none">
@@ -83,6 +88,7 @@ if (login_check($mysqli) == true) {
 
 			<div data-theme="a" data-role="footer"  data-id="persistent" data-position="fixed">
 				<h4>Register</h4>
+				<img src="img/logosandglas.png?12" width="84" height="30" class="ui-btn-right" style="margin-top:5px;">
 			</div>
 		</div>
 
@@ -169,8 +175,9 @@ if (login_check($mysqli) == true) {
 
 				</div>
 			</div><!-- /content -->
-			<div class="ui-bar-b" data-theme="a" data-role="footer"  data-id="persistent" data-position="fixed">
+			<div data-theme="a" data-role="footer"  data-id="persistent" data-position="fixed">
 				<h4  class="sessionDisp"></h4>
+				<img src="img/logosandglas.png?12" width="84" height="30" class="ui-btn-right" style="margin-top:5px;">
 			</div>
 
 			<div id="editPlayer" data-role="popup"  data-transition="pop">
@@ -312,26 +319,16 @@ if (login_check($mysqli) == true) {
 
 				</div>
 				<div  class="sidePrepp" id="middle">
-					<div id="loadedSession">
-						Du har återupptagit en gammal session - tänk på att:
-						<ul>
-							<li>
-								Alla spelare från sessionen är valda - manuellt vilande måste väljas om
-							</li>
-							<li>
-								Om en spelare tagits bort under sessionen, och en annan fått dennes nummer, har spelare 1 fått ett nytt nummer nu.
-							</li>
-						</ul>
 
-					</div>
 					<div id="dayListContainer">
 						<ul id="dayList" data-split-icon="star" data-role="listview" data-inset="true" data-divider-theme="a" data-theme="b"></ul>
 					</div>
 				</div>
 			</div>
-			<div class="ui-bar-b" data-theme="a" data-role="footer"  data-id="persistent" data-position="fixed">
+			<div data-theme="a" data-role="footer"  data-id="persistent" data-position="fixed">
 
 				<h4 class="sessionDisp"></h4>
+				<img src="img/logosandglas.png?12" width="84" height="30" class="ui-btn-right" style="margin-top:5px;">
 			</div>
 			<div id="editPlayerBN" data-role="popup"  data-transition="pop">
 				<div data-role="header">
@@ -465,9 +462,10 @@ if (login_check($mysqli) == true) {
 
 			</div><!-- /content matcher -->
 
-			<div class="ui-bar-b" data-theme="a" data-role="footer"  data-id="persistent" data-position="fixed">
+			<div data-theme="a" data-role="footer"  data-id="persistent" data-position="fixed">
 
 				<h4 class="sessionDisp"></h4>
+				<img src="img/logosandglas.png?12" width="84" height="30" class="ui-btn-right" style="margin-top:5px;">
 			</div>
 
 		</div><!-- /page matcher -->
@@ -510,27 +508,30 @@ if (login_check($mysqli) == true) {
 				</div>
 			</div><!-- /content -->
 
-			<div class="ui-bar-b" data-theme="a" data-role="footer"  data-id="persistent" data-position="fixed">
+			<div data-theme="a" data-role="footer"  data-id="persistent" data-position="fixed">
 
 				<h4 class="sessionDisp"></h4>
+				<img src="img/logosandglas.png?12" width="84" height="30" class="ui-btn-right" style="margin-top:5px;">
 			</div>
 
 		</div><!-- /page statistik -->
 
 		<div id="editSession" data-role="page" data-transition="pop">
-			<div data-role="header">
-				<h1>Sessions</h1>
-			</div>
+
 			<div data-role="content">
 				<a href="" id="newSessionLink" data-role="button">Create session</a>
 				<br>
 				<br>
-				Choose session:
+				Select session:
 				<br>
 				<div id="oldSessions"></div>
 				<br>
 				<br>
 				<a data-icon="delete" href="#" data-role="button" data-rel="back" data-theme="a" id="sessionCancel">Cancel</a>
+			</div>
+			<div data-theme="a" data-role="footer"  data-id="persistent" data-position="fixed">
+				<h4 class="sessionDisp"></h4>
+				<img src="img/logosandglas.png?12" width="84" height="30" class="ui-btn-right" style="margin-top:5px;">
 			</div>
 		</div>
 		<div id="customPairs" data-role="page" data-transition="pop">

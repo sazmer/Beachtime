@@ -1,325 +1,348 @@
 /* MOBILE CSS */
 
-
-
 /*------------------------------*/
 .table-stroke thead th {
-    border-bottom: 1px solid rgba(0, 0, 0, .1);
+	border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
-.table-stroke tbody th,
-.table-stroke tbody td {
-    border-bottom: 1px solid rgba(0, 0, 0, .05);
+.table-stroke tbody th, .table-stroke tbody td {
+	border-bottom: 1px solid rgba(0, 0, 0, .05);
 }
 /* Add alternating row stripes */
-.table-stripe tbody tr:nth-child(odd) td,
-.table-stripe tbody tr:nth-child(odd) th {
-    background-color: rgba(0,0,0,0.04);
+.table-stripe tbody tr:nth-child(odd) td, .table-stripe tbody tr:nth-child(odd) th {
+	background-color: rgba(0,0,0,0.04);
 }
 /* Add stroke to the header and last item */
-.table-stripe thead th,
-.table-stripe tbody tr:last-child {
-    border-bottom: 1px solid rgba(0, 0, 0, .1);
+.table-stripe thead th, .table-stripe tbody tr:last-child {
+	border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
-#sessions{
-    margin: 0 15px;
+#sessions {
+	margin: 0 15px;
 }
 /*table, td, th
-{
-border:1px solid green;
-}
-table {
-    min-width: 100%;
-    border-collapse:collapse;
-}
-th
-{
-    background-color:#3373a5;
-    color:white;
-    padding: 5px;
-}
-.odd{
-    background-color:#3373b5;
-    color: white;
-}
-td{
-    text-align:center;
-    vertical-align:bottom;
-    padding:5px;
-}*/
+ {
+ border:1px solid green;
+ }
+ table {
+ min-width: 100%;
+ border-collapse:collapse;
+ }
+ th
+ {
+ background-color:#3373a5;
+ color:white;
+ padding: 5px;
+ }
+ .odd{
+ background-color:#3373b5;
+ color: white;
+ }
+ td{
+ text-align:center;
+ vertical-align:bottom;
+ padding:5px;
+ }*/
 
-#winTable{
-    margin: 0 auto;
-    width: 100%;
+#winTable {
+	margin: 0 auto;
+	width: 100%;
 }
 
 #matchResults {
-    min-height: 200px;
-    min-width:500px;
+	min-height: 200px;
+	min-width: 500px;
 }
-.matchText{
-    font-size:0.8em;
-    text-align: center;
+.matchText {
+	font-size: 0.8em;
+	text-align: center;
 }
 
 #allDatabase {
-    float:left;
-
+	float: left;
 }
 #thisRound {
-    float:left;
+	float: left;
 }
-#restingContainer{
-    width:250px;
-    text-align:center;
-    float:left;
-    margin-left: 40px;
-    clear:both;
-
-}
-
-#willResta{
-    clear:both;
-    float:right;
-    margin-bottom: 20px;
-}
-#matchingContainer{
-
-    margin: 0 auto;
-}
-#addplayerFieldset{
-    width: 250px;
-    float:left;
-    margin-top:20px;
-}
-#buttonsRight{
-    float:right;
-    margin: 30px;
-    margin-right: 100px;
-
-}
-#fieldsLeft{
-    float:left;
-    margin-left: 60px;
-    margin-top: 10px;
-} 
-.par1{
-
-}
-#loadedSession{
-    display:none;
-    font-size: 11px;
-    color: red;
-}
-.fieldSet{
-    min-width: 250px;
-    clear:none;
-    float: left;
-    text-align: center;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    padding-top: 10px;
-}
-.radioDiv{
-    margin-left:30px;
-    float:left;
-    margin-top: 10px;
-}
-.winText{
-    margin-left:10px;
-    margin-top: 17px; 
-    float:left;
+#restingContainer {
+	width: 250px;
+	text-align: center;
+	float: left;
+	margin-left: 40px;
+	clear: both;
 }
 
+#willResta {
+	clear: both;
+	float: right;
+	margin-bottom: 20px;
+}
+#matchingContainer {
 
-.mainPrepp, .sidePrepp{
-    display:block; width:100%;
+	margin: 0 auto;
 }
-#makePair, #playModeI{
-    padding:5px;
+#addplayerFieldset {
+	width: 250px;
+	float: left;
+	margin-top: 20px;
 }
-.preppRadioBanor .ui-block-a, 
-.preppRadioBanor .ui-block-b{ 
-    width: 100%; 
-    float:none; 
+#buttonsRight {
+	float: right;
+	margin: 30px;
+	margin-right: 100px;
 }
-.matchBreak > .ui-block-a,  .matchBreak > .ui-block-b,.matchBreak > .ui-block-c{
-    width: 100%; 
-    float:none; 
+#fieldsLeft {
+	float: left;
+	margin-left: 60px;
+	margin-top: 10px;
 }
-#customPairs .ui-grid-a{
-    width: 95%;
+.par1 {
+
+}
+#loadedSession {
+	display: none;
+	font-size: 11px;
+	color: red;
+}
+.fieldSet {
+	min-width: 250px;
+	clear: none;
+	float: left;
+	text-align: center;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	padding-top: 10px;
+}
+.radioDiv {
+	margin-left: 30px;
+	float: left;
+	margin-top: 10px;
+}
+.winText {
+	margin-left: 10px;
+	margin-top: 17px;
+	float: left;
+}
+.sessionDisp {
+	font-size: 12px !important;
+	margin: 4px 0 !important;
+}
+
+.mainPrepp, .sidePrepp {
+	display: block;
+	width: 100%;
+}
+#makePair, #playModeI {
+	padding: 5px;
+}
+.preppRadioBanor .ui-block-a, .preppRadioBanor .ui-block-b {
+	width: 100%;
+	float: none;
+}
+.matchBreak > .ui-block-a, .matchBreak > .ui-block-b, .matchBreak > .ui-block-c {
+	width: 100%;
+	float: none;
+}
+#customPairs .ui-grid-a {
+	width: 95%;
 }
 #customPairs   .ui-content {
-    /*padding: 0 !important;*/
+	/*padding: 0 !important;*/
 }
 
 #customPairs .ui-listview {
-    margin: 0 !important;
+	margin: 0 !important;
 }
-#customPairs .ui-block-b{
-    width: 70%;
-    padding-left: 10%;
-    padding-top: 1%;
+#customPairs .ui-block-b {
+	width: 70%;
+	padding-left: 10%;
+	padding-top: 1%;
 }
-#pairContent .ui-block-a{
-width: 50% !important;
+#pairContent .ui-block-a {
+	width: 50% !important;
 }
-#pairContent .ui-block-b{
-width: 50% !important;
+#pairContent .ui-block-b {
+	width: 50% !important;
 }
-#customPairs .ui-block-a{
+#customPairs .ui-block-a {
 
-    width: 20%;
+	width: 20%;
 }
-/* Second breakpoint at 800px */	
-/* Adjusts column proportions, tweak base H1 */	
-@media all and (min-width: 50em){
-    .logRegDiv{
-        width: 600px;
-        height: 300px; 
-        position: absolute;
-        background: lightgrey;
-        top:0;
-        bottom: 0;
-        left: 0; 
-        right: 0;
-        margin: auto;
+.mainLogo {
+	width: 168px;
+	height: 60px;
+	margin: 0 auto;
+	display: block;
+}
+/* Second breakpoint at 800px */
+/* Adjusts column proportions, tweak base H1 */
+@media all and (min-width: 50em) {
+	.mainLogo {
+		width: 336px;
+		height: 120px;
+		margin: 0 auto;
+		margin-top: 10%;
+		display: block;
+	}
+	.logRegDiv {
+		width: 600px;
+		height: 300px;
+		position: absolute;
+		background: lightgrey;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		border: 2px solid #efc176;
+	}
 
-        border: 2px solid #3e6790;
-    } 
-    .logInner{
-        height: 200px; 
-    }
-    .regInner{
-        height: 270px; 
-    }
-    #newUser{
-        text-align: center;
-    }
-    .logInner, .regInner{
-        width: 235px;
+	.logInner {
+		height: 200px;
+	}
+	.regInner {
+		height: 270px;
+	}
+	#newUser {
+		text-align: center;
+	}
+	.logInner, .regInner {
+		width: 235px;
+		position: absolute;
+		top: 0px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+	.logButton {
+		margin-top: 10px;
+		position: absolute;
+		right: 0px;
+	}
+	#errorText {
+		position: absolute;
+		color: red;
+		top: 10px;
+		left: 45%;
+		width: 350px;
+		height: 30px;
+		margin-top:   - 15px;
+		margin-left: -78px;
+	}
+	.logInput {
+		height: 25px;
+		width: 230px;
+		text-align: center;
+	}
+	.mainPrepp {
+		float: left;
+		width: 40%;
+		margin-right: 5%;
+		margin-left: 10%
+	}
+	.sidePrepp {
+		float: left;
+		width: 40%;
+	}
+	.preppRadioBanor .ui-block-a {
+		width: 20%;
+		float: right;
+		margin-right: 3%;
+	}
+	.preppRadioBanor .ui-block-b {
+		width: 75.925%;
+		margin-left: 3%;
+	}
+	.matchBreak > .ui-block-a {
+		width: 29%;
+		float: left;
+		margin-left: 3%;
+	}
+	.matchBreak > .ui-block-b {
+		width: 29%;
+		float: left;
+		margin: 0 3%;
+	}
+	.matchBreak > .ui-block-c {
+		width: 29%;
+		float: left;
+		margin-right: 3%;
+	}
 
-        position: absolute;
-
-        top:0px;
-        bottom: 0;
-        left: 0; 
-        right: 0;
-        margin: auto;
-    }
-    .logButton{
-        margin-top: 10px;
-        position: absolute;
-        right: 0px;
-
-    }
-    #errorText {
-        position: absolute;
-        color: red;
-        top:10px;
-        left: 45%;
-        width:350px;
-        height: 30px;
-        margin-top: - 15px;
-        margin-left: -78px;
-    }
-    .logInput{
-        height: 25px;
-        width: 230px;
-        text-align:center;
-
-
-    }
-    .mainPrepp {  float: left;width:40%; margin-right: 5%; margin-left: 10%}
-    .sidePrepp {  float: left; width:40%; }
-    .preppRadioBanor .ui-block-a { width: 20%; float: right; margin-right:3%;  }
-    .preppRadioBanor .ui-block-b {  width: 75.925%; margin-left: 3%;}
-    .matchBreak > .ui-block-a{
-        width: 29%; float:left; margin-left: 3%;
-    }
-    .matchBreak > .ui-block-b{
-        width: 29%; float:left; margin: 0 3%;
-    }
-    .matchBreak > .ui-block-c{
-        width: 29%; float:left;margin-right: 3%;
-
-    }
-
-    #dayListContainer {
-        overflow-y: auto;  
-    }
-    #dayList{
-        width: 350px;
-    }
-
+	#dayListContainer {
+		overflow-y: auto;
+	}
+	#dayList {
+		width: 350px;
+	}
 
 }
-.mainPrepp > .ui-grid-a .ui-block-a { width: 91% }
-.mainPrepp > .ui-grid-a .ui-block-b { width: 9%; text-align: right;} 
-.firstPageButtons .ui-controlgroup-controls{
-    width:100%;
+.mainPrepp > .ui-grid-a .ui-block-a {
+	width: 91%
 }
-
-
-
+.mainPrepp > .ui-grid-a .ui-block-b {
+	width: 9%;
+	text-align: right;
+}
+.firstPageButtons .ui-controlgroup-controls {
+	width: 100%;
+}
 
 #sexRadios .ui-controlgroup-controls {
-    width:100% !important;
-    text-align: center; 
+	width: 100% !important;
+	text-align: center;
 }
 
-#sexRadios .ui-radio{
-    text-align: center !important; 
-    width:50% !important;
+#sexRadios .ui-radio {
+	text-align: center !important;
+	width: 50% !important;
 }
-.firstPageButtons .ui-radio{
-    text-align: center; 
-    width: 33%;
+.firstPageButtons .ui-radio {
+	text-align: center;
+	width: 33%;
 }
 /*div.ui-slider{width:75%;}*/
-#currentGames .ui-controlgroup-controls
-{
-    width:100%;
+#currentGames .ui-controlgroup-controls {
+	width: 100%;
 }
 #currentGames .ui-radio {
-    width:50%;
+	width: 50%;
 }
 .arrows {
-    height: 15px;
+	height: 15px;
 }
 
 .ui-icon-stats {
-    background-image: url("../img/glypicons/122-stats.png");
-
+	background-image: url("../img/glypicons/122-stats.png");
 }
 
-#dayList li.ui-li-divider{
-    padding-left:15px;
-
+#dayList li.ui-li-divider {
+	padding-left: 15px;
 }
 #dayList .ui-li {
-    height : 22px;
-    padding:7px;
-    padding-left:30px;
-    font-size: 1em;
+	height: 22px;
+	padding: 7px;
+	padding-left: 30px;
+	font-size: 1em;
 }
 
 /* password colors registration */
-.short{
+.short {
 	background-color: #DE957E !important;
 }
-.weak{
+.weak {
 	background-color: #F2F1A0 !important;
 }
-.good{
+.good {
 	background-color: #A0CDF2 !important;
 }
-.strong{
+.strong {
 	background-color: #87C47C !important;
 }
 /* END password colors registration END */
 
-::-webkit-input-placeholder { text-align: center; text-transform: uppercase; font-size: 14px;}
-
-
+::-webkit-input-placeholder {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 14px;
+}
 
