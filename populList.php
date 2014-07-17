@@ -32,7 +32,7 @@ switch ($_REQUEST['action']) {
 
 		$returnArray = array();
 		foreach ($arrayToPrint as $playerB) {
-			$returnArray[] = '<option value="' . $playerB[0] . '">' . $playerB[1] . " " . $playerB[2] . '</option>';
+			$returnArray[] = '<option  value="' . $playerB[0] . '">' . $playerB[1] . " " . $playerB[2] . '</option>';
 		}
 
 		break;
@@ -63,9 +63,9 @@ switch ($_REQUEST['action']) {
 
 				$exists = false;
 				while ($check = $checked -> fetch_assoc()) {
-					var_dump($playerB[0]);
-					var_dump($check['player1']);
-					var_dump($check['player2']);
+					// var_dump($playerB[0]);
+					// var_dump($check['player1']);
+					// var_dump($check['player2']);
 					//                    echo "<br>";
 					//                    var_dump($check);
 					//                    echo "<br>";
@@ -76,7 +76,7 @@ switch ($_REQUEST['action']) {
 						$exists = true;
 					}
 				}
-				var_dump($exists);
+				// var_dump($exists);
 				$smallArr = array();
 				foreach ($_SESSION['playerArray'] as $player) {
 					if ($player -> id == $playerB[0] && !$exists) {
@@ -177,7 +177,7 @@ switch ($_REQUEST['action']) {
 		$returnArray = array();
 		usort($rArray, "sortByNumber");
 		foreach ((array)$rArray as $player) {
-			$returnArray[] = '<option value="' . $player -> id . '">' . $player -> boardNumber . " " . $player -> firstname . " " . $player -> lastname . '</option>';
+			$returnArray[] = '<option  value="' . $player -> id . '">' . $player -> boardNumber . " " . $player -> firstname . " " . $player -> lastname . '</option>';
 		}
 		if (count($returnArray) < 1) {
 			$returnArray[] = "empty";
@@ -226,7 +226,7 @@ switch ($_REQUEST['action']) {
 		$returnArray2 = array();
 		usort($pArray, "sortByNumber");
 		foreach ((array)$pArray as $player) {
-			$returnArray2[] = '<li data-icon="arrow-r" id="' . $player -> id . '"><a href="#" id="player' . $player -> id . '" class="editBN">' . $player -> boardNumber . " " . $player -> firstname . " " . $player -> lastname . '</a></li>';
+			$returnArray2[] = '<li data-theme="a" data-icon="user" id="' . $player -> id . '"><a href="#" id="player' . $player -> id . '" class="editBN">' . $player -> boardNumber . " " . $player -> firstname . " " . $player -> lastname . '</a></li>';
 		}
 		if (count($returnArray2) < 1) {
 			$returnArray2[] = "empty";
@@ -264,7 +264,7 @@ switch ($_REQUEST['action']) {
 		$returnArray1 = array();
 		usort($rArray, "sortByNumber");
 		foreach ((array)$rArray as $player) {
-			$returnArray1[] = '<li data-icon="arrow-r" data-theme="c" id="' . $player -> id . '"><a href="#" id="player' . $player -> id . '" class="editBN">' . $player -> boardNumber . " " . $player -> firstname . " " . $player -> lastname . '</a></li>';
+			$returnArray1[] = '<li data-icon="user" data-theme="b" id="' . $player -> id . '"><a href="#" id="player' . $player -> id . '" class="editBN">' . $player -> boardNumber . " " . $player -> firstname . " " . $player -> lastname . '</a></li>';
 		}
 		if (count($returnArray1) < 1) {
 			$returnArray1[] = "empty";

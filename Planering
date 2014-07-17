@@ -1,15 +1,24 @@
 Planering:
 
 Opponent history - hur många gånger har man mött den på andra sidan?
-
+Skicka aktiveringsmail igen
+Lägga till spelare -> checkruta för lägga till dagens matchning
+Flytta resetknappen
+Storlek på preppsidan + ta bort det som inte fungerar från live
+Reset + rapportknappar blurrade vid första inlogget också + stannad klocka
+Varför laddas inte sessionerna varje gång - måste refresha ibland?
+centrera klocka för mobilversion
+Färg på text i menyn - olika???!
+Markera chosen resters på matchsidan
 Boll + klocka för splash+icon
 Admin -> välja om tid eller ej
 Youtube instruktionsfilm
 Plocka ihop en egen konstellation och lotta resten
-Istället för toast - varningsmeddelanden med tillfällig footer/header?
+
 
 
 Kanske:
+Istället för toast - varningsmeddelanden med tillfällig footer/header?
 Ta bort sessioner?
 Fler steg tillbaka i framtiden?
 (Hur gör man om det är ex 3 över av ett kön som vilar varje gång? ska det nån gång bli ett eget lag av dom?)

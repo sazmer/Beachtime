@@ -175,48 +175,42 @@
 /* Second breakpoint at 800px */
 /* Adjusts column proportions, tweak base H1 */
 @media all and (min-width: 50em) {
+	#register, #login{
+		padding: 5% 0;
+	}
+	#loginContent, #regContent{
+		padding: 7% 0;
+	}
 	.mainLogo {
 		width: 336px;
 		height: 120px;
-		margin: 0 auto;
-		margin-top: 10%;
+		/*margin: 2% auto;*/
+
 		display: block;
 	}
 	.logRegDiv {
-		width: 600px;
-		height: 300px;
-		position: absolute;
-		background: lightgrey;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		margin: auto;
+		background: #E3E3E3;
+		padding: 10% auto;
 		border: 2px solid #efc176;
 	}
 
 	.logInner {
-		height: 200px;
+		/*height: 200px;*/
 	}
 	.regInner {
-		height: 270px;
+		/*height: 200px;*/
 	}
 	#newUser {
 		text-align: center;
 	}
 	.logInner, .regInner {
 		width: 235px;
-		position: absolute;
-		top: 0px;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		margin: auto;
+
+		margin: 2% auto;
 	}
 	.logButton {
 		margin-top: 10px;
-		position: absolute;
-		right: 0px;
+
 	}
 	#errorText {
 		position: absolute;

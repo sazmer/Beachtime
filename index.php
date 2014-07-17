@@ -22,10 +22,10 @@ if (login_check($mysqli) == true) {
 		<link rel="shortcut icon" href="favicon.ico" >
 
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
-		<link rel="stylesheet" href="css/style.css?version=21221111">
+		<link rel="stylesheet" href="css/style.css?version=2122221111">
 		<link rel="stylesheet" href="css/TimeCircles.css" >
 		<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
-		<link rel="stylesheet" href="css/themes/orange.css?12122" />
+		<link rel="stylesheet" href="css/themes/orange.css?12221222" />
 
 		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 
@@ -42,35 +42,29 @@ if (login_check($mysqli) == true) {
 		<div data-role="page" id="login">
 			<!-- <div data-theme="b" data-role="header" data-id="persistent" data-position="fixed">
 			<h1>BeachTime</h1>
-
 			</div> -->
-			<div data-role="content">
+			<div id="loginContent" data-role="content">
 				<img src="img/logosandglas.png?12" class="mainLogo">
 				<div class="logRegDiv">
-
-					<p id="errorText"></p>
 					<form class="logInner" data-ajax="false" id="login_form"  action="" method="post"  name="login_form">
-
 						<input placeholder="Email" type="text" id="mail" name="email" />
 						<input placeholder="Password" type="password" name="password" id="password"/>
 						<br />
-
 						<a data-role="button" value="Registrera" href="#register">Register</a>
 						<input data-theme="b" class="logButton" id="submitButton" type="submit" action="submit" value="Login" />
 					</form>
-					<p  id="newUser"></p>
 				</div>
 			</div><!-- /content -->
-
-			<!-- <div class="ui-bar-b" data-theme="a" data-role="footer"  data-id="persistent" data-position="fixed">
-			<h4 data-theme="c">BeachTime</h4>
+		<!-- <div class="ui-bar-b" data-theme="a" data-role="footer"  data-id="persistent" data-position="fixed">
+				<h4 data-theme="c">BeachTime</h4>
 			</div> -->
 		</div>
 		<div data-role="page" id="register">
 			<!-- <div data-theme="b" data-role="header" data-id="persistent" data-position="fixed">
 			<h1>BeachTime</h1>
 			</div> -->
-			<div data-role="content">
+			<div id="regContent" data-role="content">
+				<img src="img/logosandglas.png?12" class="mainLogo">
 				<div class="logRegDiv">
 					<form autocomplete="off" data-ajax="false"  class="regInner" id="registerForm" name="registerForm" action="#">
 						<input autocomplete="off" placeholder="Username" type="text" id="regUser" />
@@ -86,18 +80,18 @@ if (login_check($mysqli) == true) {
 				</div>
 			</div><!-- /content -->
 
-			<div data-theme="a" data-role="footer"  data-id="persistent" data-position="fixed">
+			<!-- <div data-theme="a" data-role="footer"  data-id="persistent" data-position="fixed">
 				<h4>Register</h4>
 				<img src="img/logosandglas.png?12" width="84" height="30" class="ui-btn-right" style="margin-top:5px;">
-			</div>
+			</div> -->
 		</div>
 
 		<!-- --------------Adminsida----------------- -->
 
 		<div data-role="page" id="admin">
-			<div data-theme="a" data-role="header" data-id="persistent" data-position="fixed">
+			<div  data-role="header" data-id="persistent" data-position="fixed">
 				<div data-role="navbar" data-iconpos="top">
-					<ul>
+					<ul >
 						<li>
 							<a class="ui-btn-active ui-state-persist" data-icon="gear" data-theme="a" href="index.php#admin">Settings</a>
 						</li>
@@ -117,18 +111,23 @@ if (login_check($mysqli) == true) {
 			<div data-role="content">
 				<div id="startPageGrid" class="matchBreak ui-grid-b">
 					<div id="addPlayah" class="ui-block-a">
+						<ul id="adjustSettings" data-role="listview" data-inset="true" class="ui-corner-all">
+							<li>
+								<label for="courts">Courts</label>
+								<input type="range" name="courts" id="courts" min="0" max="20" />
+							</li>
+							<li>
+								<label for="timeSlide">Minutes:</label>
+								<input type="range" name="timeSlide" id="timeSlide"  min="0" max="45">
+								<!--                        <a href="#" data-role="button">Set time</a>-->
+							</li>
+							<li>
+								<button data-theme="b"  id="setButton" value="Apply">Apply</button>
+								
+							</li>
+						</ul>
+						<a href="logout.php" id="logoutButton" data-theme="b" data-icon="delete" data-role="button">Log out</a>
 
-						<label for="courts">Courts</label>
-						<input type="range" name="courts" id="courts" min="0" max="20" />
-						<br>
-						<label for="timeSlide">Minutes:</label>
-						<input type="range" name="timeSlide" id="timeSlide"  min="0" max="45">
-						<!--                        <a href="#" data-role="button">Set time</a>-->
-						<br/>
-						<a href="#.php" id="setButton" data-role="button" data-theme="a">Apply</a>
-						<br>
-						<a href="logout.php" id="logoutButton" data-icon="delete" data-role="button">Log out</a>
-						<br>
 					</div>
 					<div id="middleStart" class="ui-block-b">
 						<form id="addPlayerForm">
@@ -142,7 +141,7 @@ if (login_check($mysqli) == true) {
 									<input placeholder="Last name" name="inlname" type="text">
 								</li>
 								<li id="sexRadios" data-role="fieldcontain">
-									<fieldset   id="insexRadio"  data-role="controlgroup" data-type="horizontal" data-role="fieldcontain">
+									<fieldset data-theme="a"   id="insexRadio"  data-role="controlgroup" data-type="horizontal" data-role="fieldcontain">
 										<label  for="insexM">Male</label>
 										<input  type="radio" name="insex" id="insexM"value="M"/>
 										<label  for="insexF">Female</label>
@@ -196,8 +195,8 @@ if (login_check($mysqli) == true) {
 								<label class="ui-hidden-accessible" for="edinlname">Efternamn:</label>
 								<input placeholder="Efternamn" id="edinlname" name="edinlname" type="text">
 							</li>
-							<li data-role="fieldcontain">
-								<fieldset  id="edinsexRadio" data-role="controlgroup" data-type="horizontal" >
+							<li  data-role="fieldcontain">
+								<fieldset id="edinsexRadio" data-role="controlgroup" data-type="horizontal" >
 									<label for="edinsexM">Male</label>
 									<input type="radio" name="edinsex" id="edinsexM" value="M"/>
 									<label for="edinsexF">Female</label>
@@ -275,16 +274,17 @@ if (login_check($mysqli) == true) {
 						<input data-theme="b" type="button" data-inline="true" data-iconpos="notext" data-iconpos="top"  data-icon="arrow-d" id="toDay" name="toDay" />
 					</div>
 
-					<div class="ui-grid-a">
-						<div class="ui-block-a">
+					<!-- <div class="ui-grid-a">
+						<div class="ui-block-a"> -->
+							<div>
 							<label class="ui-hidden-accessible" for="daySelect" class="select">Chosen to play</label>
 							<SELECT data-iconpos="left" data-native-menu="false" multiple="multiple" id="daySelect" name="day" >
 								<option class="headSel">Chosen to play</option>
 							</SELECT>
-						</div>
-						<div class="ui-block-b">
+						<!--</div>
+						 <div class="ui-block-b">
 							<a href="#" id="makePair" data-role="button" data-icon="grid"  data-iconpos="notext">Make pair</a>
-						</div>
+						</div> -->
 					</div>
 					<div style="width:100px; margin: 0 auto;">
 						<input data-inline="true" data-iconpos="notext" data-theme="b" type="button" class="arrows"  name="fromRest" data-icon="arrow-u">
@@ -298,9 +298,9 @@ if (login_check($mysqli) == true) {
 
 					</SELECT>
 					<br>
-					<div class="ui-grid-a">
+					<!-- <div class="ui-grid-a">
 						<div class="ui-block-a">
-							<fieldset  class="firstPageButtons" id="prioRest" data-role="controlgroup" data-type="horizontal">
+							<fieldset data-theme="b" class="firstPageButtons" id="prioRest" data-role="controlgroup" data-type="horizontal">
 								<input type="radio" value="true" id="restTrue" name="prioRest" checked="checked" />
 								<label for="restTrue">1</label>
 								<input type="radio" value="false2" id="restFalse" name="prioRest"  />
@@ -312,8 +312,8 @@ if (login_check($mysqli) == true) {
 						<div class="ui-block-b">
 							<a href="#" id="playModeI" data-role="button"  data-iconpos="notext" data-icon="info">Info</a>
 						</div>
-					</div>
-					<input type="button"  data-icon="star" name="matchning" value="Match chosen players!">
+					</div> -->
+					<input type="button"  data-icon="star" data-theme="b" name="matchning" value="MatchMake!">
 
 					<br>
 
@@ -442,8 +442,8 @@ if (login_check($mysqli) == true) {
 							</ul>
 						</div>
 						<br>
-						<a href="" data-role="button"  data-icon="back" id="resetButton">Reset pairings</a>
-						<a href="" data-role="button"  id="resultButton">Report results</a>
+						<a href="" data-theme="b" data-role="button"  data-icon="back" id="resetButton">Reset pairings</a>
+						<a href="" data-theme="b"  data-role="button"  id="resultButton">Report results</a>
 
 						<div id="currentGames"></div>
 
@@ -518,15 +518,14 @@ if (login_check($mysqli) == true) {
 
 		<div id="editSession" data-role="page" data-transition="pop">
 
-			<div data-role="content">
-				<a href="" id="newSessionLink" data-role="button">Create session</a>
-				<br>
-				<br>
+			<div  data-role="content">
+				
 				Select session:
 				<br>
 				<div id="oldSessions"></div>
 				<br>
-				<br>
+				<br><a href="" data-icon="edit" data-theme="b" id="newSessionLink" data-role="button">Create new session</a>
+				
 				<a data-icon="delete" href="#" data-role="button" data-rel="back" data-theme="a" id="sessionCancel">Cancel</a>
 			</div>
 			<div data-theme="a" data-role="footer"  data-id="persistent" data-position="fixed">
