@@ -22,17 +22,17 @@ if (login_check($mysqli) == true) {
 		<link rel="shortcut icon" href="favicon.ico" >
 
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
-		<link rel="stylesheet" href="css/style.css?version=21222221111">
+		<link rel="stylesheet" href="css/style.css?version=21222222221111">
 		<link rel="stylesheet" href="css/TimeCircles.css" >
 		<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
-		<link rel="stylesheet" href="css/themes/orange.css?12221222" />
+		<link rel="stylesheet" href="css/themes/orange.css?12222231222" />
 
 		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 
 		<!--        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>-->
 		<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
 		<script type="text/javascript" src="js/TimeCircles.js"></script>
-		<script type="text/javascript" src="js/main.js?12232122135"></script>
+		<script type="text/javascript" src="js/main.js?122321212222222135"></script>
 		<script type="text/javascript" src="js/statistik.js?11111221121122"></script>
 		<script type="text/javascript" src="js/adminScript.js?5243444433342444221"></script>
 		<script type="text/javascript" src="js/sha512.js"></script>

@@ -59,6 +59,7 @@ if (login_check($mysqli) == true) {
 	$delTempRestsSQL = sprintf("DELETE FROM `players-rests-unreported` WHERE session='%s' AND user='%s'", $_SESSION['sessID'], $_SESSION['username']);
 	$mysqli -> query($delTempRestsSQL);
 
+
 	$returnRound = json_encode($_SESSION['playerArray']);
 	echo $returnRound;
 } else {

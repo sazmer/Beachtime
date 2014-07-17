@@ -24,7 +24,7 @@ button,
 .ui-btn {
 	font-size: 1em;
 	line-height: 1.3;
-	 font-family: sans-serif /*{global-font-family}*/;
+	   font-family: sans-serif /*{global-font-family}*/;
 }
 legend,
 .ui-input-text input,
@@ -904,10 +904,10 @@ html .ui-bar-e .ui-body-inherit,
 html .ui-body-e .ui-body-inherit,
 html body .ui-group-theme-e .ui-body-inherit,
 html .ui-panel-page-container-e {
-	background-color: #ffffff /*{e-body-background-color}*/;
+	background-color: #333333 /*{e-body-background-color}*/;
 	border-color: #dddddd /*{e-body-border}*/;
-	color: #333333 /*{e-body-color}*/;
-	text-shadow: 0 /*{e-body-shadow-x}*/ 1px /*{e-body-shadow-y}*/ 0 /*{e-body-shadow-radius}*/ #f3f3f3 /*{e-body-shadow-color}*/;
+	color: #ffffff /*{e-body-color}*/;
+	text-shadow: 0 /*{e-body-shadow-x}*/ 0px /*{e-body-shadow-y}*/ 0 /*{e-body-shadow-radius}*/ #f3f3f3 /*{e-body-shadow-color}*/;
 }
 .ui-body-e {
 	border-width: 1px;
@@ -1032,6 +1032,8 @@ html head + body .ui-body-e.ui-focus {
 	-moz-box-shadow: 0 0 12px #efc176 /*{e-active-background-color}*/;
 	box-shadow: 0 0 12px #efc176 /*{e-active-background-color}*/;
 }
+
+
 
 
 /* Structure */
