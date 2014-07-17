@@ -13,11 +13,11 @@ var toast = function(msg) {
 	});
 };
 $(document).ajaxStart(function() {
-    $.mobile.loading('show');
+	$.mobile.loading('show');
 });
 
 $(document).ajaxStop(function() {
-    $.mobile.loading('hide');
+	$.mobile.loading('hide');
 });
 function onBodyLoad() {
 	$("#login_form").on("submit", function(e) {
@@ -25,8 +25,6 @@ function onBodyLoad() {
 		//        $("#submitButton", this).attr("disabled", "disabled");
 		var p = formhash(document.forms['login_form'], document.forms['login_form'].password);
 		var u = $("#mail").val();
-		console.log(p);
-
 		$.post("loginscr.php", {
 			username : u,
 			password : p
@@ -41,7 +39,7 @@ function onBodyLoad() {
 				} else {
 					toast("Login failed. Please check your account information");
 				}
-				console.log(res);
+				// console.log(res);
 				//                navigator.notification.alert("Your login failed", function() {
 				//                });
 			}
@@ -49,10 +47,6 @@ function onBodyLoad() {
 	});
 	$("#registerForm").on("submit", function(e) {
 		e.preventDefault();
-		console.log(e);
-		console.log($('#regPassword').val());
-		console.log(document.forms['registerForm'].password);
-		console.log(checkStrength(document.forms['registerForm'].password.value, $('#regPassword')));
 		if (checkStrength($('#regPassword').val(), $('#regPassword')) < 2) {
 			toast("Password to weak.");
 		} else {
@@ -72,14 +66,14 @@ function onBodyLoad() {
 				},
 				dataType : 'json',
 			}).then(function(res) {
-				console.log(res);
+				// console.log(res);
 				if (res == "registered") {
 					toast("Activation email sent, please check your email.");
 					$.mobile.pageContainer.pagecontainer("change", "index.php", {
-					transition : "flip"
+						transition : "flip"
 					});
 				} else {
-					console.log(res);
+					// console.log(res);
 					toast(res);
 					var out = "";
 					$.each(res, function(i, obj) {
@@ -116,26 +110,26 @@ function onBodyLoad() {
 
 		//if length is 8 characters or more, increase strength value
 		if (password.length > 7)
-			strength += 1
+			strength += 1;
 
 		//if password contains both lower and uppercase characters, increase strength value
 		if (password.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/))
-			strength += 1
+			strength += 1;
 
 		//if it has numbers and characters, increase strength value
 		if (password.match(/([a-zA-Z])/) && password.match(/([0-9])/))
-			strength += 1
+			strength += 1;
 
 		//if it has one special character, increase strength value
 		if (password.match(/([!,%,&,@,#,$,^,*,?,_,~])/))
-			strength += 1
+			strength += 1;
 
 		//if it has two special characters, increase strength value
 		if (password.match(/(.*[!,%,&,@,#,$,^,*,?,_,~].*[!,%,&,@,#,$,^,*,?,_,~])/))
-			strength += 1
+			strength += 1;
 
 		//now we have calculated strength value, we can return messages
-console.log(strength);
+		console.log(strength);
 		//if value is less than 2
 		if (strength < 2) {
 			input.removeClass();
@@ -914,27 +908,28 @@ $(document).ready(function() {
 				if (!$('#restSelect option[value="' + idt + '"]').length && !$('#daySelect option[value="' + idt + '"]').length) {
 
 					$.get('assignBoardNumber.php', {
-						ids : idt
-					}, function(data) {
+					ids : idt
+				}, function(data) {
 
-						day.append('<option value="' + idt + '">' + data + ' ' + $("#allSelect option[value='" + idt + "']").text() + '</option>');
-						refresh();
-						$.ajax({
-							url : "saveState.php",
-							data : {
-								ids : idt,
-							},
-							dataType : 'json'
-						}).then(function(data) {
-							populAll();
-						});
-						// $.get('saveState.php', {
-						// ids : idt,
-						// type : "day"
-						// }, function(data) {
-						// populList('list', dayList);
-						// });
+					// day.append('<option value="' + idt + '">' + data + ' ' + $("#allSelect option[value='" + idt + "']").text() + '</option>');
+					// refresh();
+					$.ajax({
+						url : "saveState.php",
+						data : {
+							ids : idt,
+							action : "addPlayer"
+						},
+						dataType : 'json'
+					}).then(function(data) {
+						populAll();
 					});
+					// $.get('saveState.php', {
+					// ids : idt,
+					// type : "day"
+					// }, function(data) {
+					// populList('list', dayList);
+					// });
+				});
 					toast($(".playerListLink").first().text() + " tillagd");
 					$('input[data-type="search"]').val("");
 					$('input[data-type="search"]').trigger("change");
@@ -1069,8 +1064,8 @@ $(document).ready(function() {
 					ids : idt
 				}, function(data) {
 
-					day.append('<option value="' + idt + '">' + data + ' ' + $("#allSelect option[value='" + idt + "']").text() + '</option>');
-					refresh();
+					// day.append('<option value="' + idt + '">' + data + ' ' + $("#allSelect option[value='" + idt + "']").text() + '</option>');
+					// refresh();
 					$.ajax({
 						url : "saveState.php",
 						data : {

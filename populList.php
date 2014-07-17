@@ -38,13 +38,14 @@ switch ($_REQUEST['action']) {
 		break;
 	case "filter" :
 		$pieces = array();
-		$pieces[0] = " ";
-		$pieces[1] = " ";
 		if (strpos($_REQUEST['q'], ' ') !== false) {
 			$pieces = explode(" ", $_REQUEST['q']);
-		}
 		$query = sprintf("SELECT * FROM players WHERE (first_name LIKE '%%%s%%' OR last_name LIKE '%%%s%%' OR CONCAT( first_name,  ' ', last_name ) LIKE '%%%s%%' OR (first_name LIKE '%%%s%%' AND last_name LIKE '%%%s%%')) AND user = '%s'", $_REQUEST['q'], $_REQUEST['q'], $_REQUEST['q'], $pieces[0], $pieces[1], $_SESSION['username']);
+		}else{
+			$query = sprintf("SELECT * FROM players WHERE (first_name LIKE '%%%s%%' OR last_name LIKE '%%%s%%' OR CONCAT( first_name,  ' ', last_name ) LIKE '%%%s%%') AND user = '%s'", $_REQUEST['q'], $_REQUEST['q'], $_REQUEST['q'], $_SESSION['username']);
+		}
 		$result = $mysqli -> query($query);
+
 		$arrayToPrint = array();
 		while ($row = $result -> fetch_row()) {
 			$playerA = array();

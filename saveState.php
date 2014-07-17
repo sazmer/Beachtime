@@ -13,7 +13,7 @@ while ($PL = mysqli_fetch_row($playerListDB)) {
 	//session playerid  user
 }
 if ($_REQUEST['action'] == "addPlayer") {
-	foreach ($_REQUEST['ids'] as $requestId) {
+	foreach ((array)$_REQUEST['ids'] as $requestId) {
 		$existed = false;
 		foreach ((array)$playerList as $playerID) {
 			if ($playerID == $requestId) {
