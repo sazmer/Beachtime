@@ -19,7 +19,7 @@ if (login_check($mysqli) == true) {
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<META NAME="description" CONTENT="Time for beachvolleyball? Time for BeachTime!">
-		<link rel="shortcut icon" href="favicon.ico" >
+		<link rel="shortcut icon" href="favicon.ico?12" >
 
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
 		<link rel="stylesheet" href="css/style.css?version=21222222221111">
@@ -32,7 +32,7 @@ if (login_check($mysqli) == true) {
 		<!--        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>-->
 		<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
 		<script type="text/javascript" src="js/TimeCircles.js"></script>
-		<script type="text/javascript" src="js/main.js?122321212222222135"></script>
+		<script type="text/javascript" src="js/main.js?135"></script>
 		<script type="text/javascript" src="js/statistik.js?11111221121122"></script>
 		<script type="text/javascript" src="js/adminScript.js?5243444433342444221"></script>
 		<script type="text/javascript" src="js/sha512.js"></script>
@@ -55,8 +55,8 @@ if (login_check($mysqli) == true) {
 					</form>
 				</div>
 			</div><!-- /content -->
-		<!-- <div class="ui-bar-b" data-theme="a" data-role="footer"  data-id="persistent" data-position="fixed">
-				<h4 data-theme="c">BeachTime</h4>
+			<!-- <div class="ui-bar-b" data-theme="a" data-role="footer"  data-id="persistent" data-position="fixed">
+			<h4 data-theme="c">BeachTime</h4>
 			</div> -->
 		</div>
 		<div data-role="page" id="register">
@@ -81,8 +81,8 @@ if (login_check($mysqli) == true) {
 			</div><!-- /content -->
 
 			<!-- <div data-theme="a" data-role="footer"  data-id="persistent" data-position="fixed">
-				<h4>Register</h4>
-				<img src="img/logosandglas.png?12" width="84" height="30" class="ui-btn-right" style="margin-top:5px;">
+			<h4>Register</h4>
+			<img src="img/logosandglas.png?12" width="84" height="30" class="ui-btn-right" style="margin-top:5px;">
 			</div> -->
 		</div>
 
@@ -93,16 +93,16 @@ if (login_check($mysqli) == true) {
 				<div data-role="navbar" data-iconpos="top">
 					<ul >
 						<li>
-							<a class="ui-btn-active ui-state-persist" data-icon="gear" data-theme="a" href="index.php#admin">Settings</a>
+							<a class="ui-btn-active ui-state-persist" data-icon="gear" data-theme="b" href="index.php#admin">Settings</a>
 						</li>
 						<li>
-							<a  data-icon="edit" data-theme="a"    href="index.php#prepp">Prep</a>
+							<a  data-icon="edit" data-theme="b" href="index.php#prepp">Prep</a>
 						</li>
 						<li>
-							<a  data-icon="grid" data-theme="a" href="index.php#matcher">Matches</a>
+							<a  data-icon="grid" data-theme="b" href="index.php#matcher">Matches</a>
 						</li>
 						<li>
-							<a  data-icon="star" data-theme="a" href="index.php#statistik">Statistics</a>
+							<a  data-icon="star" data-theme="b" href="index.php#statistik">Statistics</a>
 						</li>
 					</ul>
 				</div><!-- /navbar -->
@@ -122,8 +122,10 @@ if (login_check($mysqli) == true) {
 								<!--                        <a href="#" data-role="button">Set time</a>-->
 							</li>
 							<li>
-								<button data-theme="b"  id="setButton" value="Apply">Apply</button>
-								
+								<button data-theme="b"  id="setButton" value="Apply">
+									Apply
+								</button>
+
 							</li>
 						</ul>
 						<a href="logout.php" id="logoutButton" data-theme="b" data-icon="delete" data-role="button">Log out</a>
@@ -243,16 +245,16 @@ if (login_check($mysqli) == true) {
 				<div data-role="navbar" data-iconpos="top">
 					<ul>
 						<li>
-							<a  data-icon="gear" data-theme="a" href="index.php#admin">Settings</a>
+							<a  data-icon="gear" data-theme="b" href="index.php#admin">Settings</a>
 						</li>
 						<li>
-							<a class="ui-btn-active ui-state-persist" data-icon="edit"    data-theme="a" href="index.php#prepp">Prep</a>
+							<a class="ui-btn-active ui-state-persist" data-icon="edit" data-theme="b" href="index.php#prepp">Prep</a>
 						</li>
 						<li>
-							<a  data-icon="grid" data-theme="a" href="index.php#matcher">Matches</a>
+							<a  data-icon="grid" data-theme="b" href="index.php#matcher">Matches</a>
 						</li>
 						<li>
-							<a  data-icon="star" data-theme="a" href="index.php#statistik">Statistics</a>
+							<a  data-icon="star" data-theme="b" href="index.php#statistik">Statistics</a>
 						</li>
 
 					</ul>
@@ -275,15 +277,15 @@ if (login_check($mysqli) == true) {
 					</div>
 
 					<!-- <div class="ui-grid-a">
-						<div class="ui-block-a"> -->
-							<div>
-							<label class="ui-hidden-accessible" for="daySelect" class="select">Chosen to play</label>
-							<SELECT data-iconpos="left" data-native-menu="false" multiple="multiple" id="daySelect" name="day" >
-								<option class="headSel">Chosen to play</option>
-							</SELECT>
+					<div class="ui-block-a"> -->
+					<div>
+						<label class="ui-hidden-accessible" for="daySelect" class="select">Chosen to play</label>
+						<SELECT data-iconpos="left" data-native-menu="false" multiple="multiple" id="daySelect" name="day" >
+							<option class="headSel">Chosen to play</option>
+						</SELECT>
 						<!--</div>
-						 <div class="ui-block-b">
-							<a href="#" id="makePair" data-role="button" data-icon="grid"  data-iconpos="notext">Make pair</a>
+						<div class="ui-block-b">
+						<a href="#" id="makePair" data-role="button" data-icon="grid"  data-iconpos="notext">Make pair</a>
 						</div> -->
 					</div>
 					<div style="width:100px; margin: 0 auto;">
@@ -299,19 +301,19 @@ if (login_check($mysqli) == true) {
 					</SELECT>
 					<br>
 					<!-- <div class="ui-grid-a">
-						<div class="ui-block-a">
-							<fieldset data-theme="b" class="firstPageButtons" id="prioRest" data-role="controlgroup" data-type="horizontal">
-								<input type="radio" value="true" id="restTrue" name="prioRest" checked="checked" />
-								<label for="restTrue">1</label>
-								<input type="radio" value="false2" id="restFalse" name="prioRest"  />
-								<label for="restFalse">2</label>
-								<input type="radio" value="false" id="randomRest" name="prioRest"  />
-								<label for="randomRest">3</label>
-							</fieldset>
-						</div>
-						<div class="ui-block-b">
-							<a href="#" id="playModeI" data-role="button"  data-iconpos="notext" data-icon="info">Info</a>
-						</div>
+					<div class="ui-block-a">
+					<fieldset data-theme="b" class="firstPageButtons" id="prioRest" data-role="controlgroup" data-type="horizontal">
+					<input type="radio" value="true" id="restTrue" name="prioRest" checked="checked" />
+					<label for="restTrue">1</label>
+					<input type="radio" value="false2" id="restFalse" name="prioRest"  />
+					<label for="restFalse">2</label>
+					<input type="radio" value="false" id="randomRest" name="prioRest"  />
+					<label for="randomRest">3</label>
+					</fieldset>
+					</div>
+					<div class="ui-block-b">
+					<a href="#" id="playModeI" data-role="button"  data-iconpos="notext" data-icon="info">Info</a>
+					</div>
 					</div> -->
 					<input type="button"  data-icon="star" data-theme="b" name="matchning" value="MatchMake!">
 
@@ -407,16 +409,16 @@ if (login_check($mysqli) == true) {
 				<div data-role="navbar" data-iconpos="top">
 					<ul>
 						<li>
-							<a  data-icon="gear" data-theme="a" href="index.php#admin">Settings</a>
+							<a  data-icon="gear" data-theme="b" href="index.php#admin">Settings</a>
 						</li>
 						<li>
-							<a  data-icon="edit" data-theme="a"    href="index.php#prepp">Prep</a>
+							<a  data-icon="edit" data-theme="b" href="index.php#prepp">Prep</a>
 						</li>
 						<li>
-							<a class="ui-btn-active ui-state-persist" data-icon="grid" data-theme="a" href="index.php#matcher">Matches</a>
+							<a class="ui-btn-active ui-state-persist" data-icon="grid" data-theme="b" href="index.php#matcher">Matches</a>
 						</li>
 						<li>
-							<a  data-icon="star" data-theme="a" href="index.php#statistik">Statistics</a>
+							<a  data-icon="star" data-theme="b" href="index.php#statistik">Statistics</a>
 						</li>
 					</ul>
 				</div><!-- /navbar -->
@@ -477,16 +479,16 @@ if (login_check($mysqli) == true) {
 				<div data-role="navbar" data-iconpos="top">
 					<ul>
 						<li>
-							<a  data-icon="gear" data-theme="a" href="index.php#admin">Settings</a>
+							<a  data-icon="gear" data-theme="b" href="index.php#admin">Settings</a>
 						</li>
 						<li>
-							<a  data-icon="edit" data-theme="a"   href="index.php#prepp">Prep</a>
+							<a  data-icon="edit" data-theme="b" href="index.php#prepp">Prep</a>
 						</li>
 						<li>
-							<a  data-icon="grid" data-theme="a" href="index.php#matcher">Matches</a>
+							<a  data-icon="grid" data-theme="b" href="index.php#matcher">Matches</a>
 						</li>
 						<li>
-							<a class="ui-btn-active ui-state-persist" data-icon="star" data-theme="a" href="index.php#statistik">Statistics</a>
+							<a class="ui-btn-active ui-state-persist" data-icon="star" data-theme="b" href="index.php#statistik">Statistics</a>
 						</li>
 					</ul>
 				</div><!-- /navbar -->
@@ -518,20 +520,25 @@ if (login_check($mysqli) == true) {
 
 		<div id="editSession" data-role="page" data-transition="pop">
 
-			<div  data-role="content">
-				
-				Select session:
-				<br>
-				<div id="oldSessions"></div>
-				<br>
-				<br><a href="" data-icon="edit" data-theme="b" id="newSessionLink" data-role="button">Create new session</a>
-				
-				<a data-icon="delete" href="#" data-role="button" data-rel="back" data-theme="a" id="sessionCancel">Cancel</a>
+			<div id="loginContent" data-role="content">
+				<img src="img/logosandglas.png?12" class="mainLogo">
+				<div class="logRegDiv">
+					<div class="edSessInner">
+						
+						<div id="oldSessions"></div>
+						<br>
+						<br>
+						<a href="" data-icon="edit" data-theme="b" id="newSessionLink" data-role="button">Create new session</a>
+
+						<a data-icon="delete" href="#" data-role="button" data-rel="back" data-theme="a" id="sessionCancel">Cancel</a>
+					</div>
+				</div>
 			</div>
-			<div data-theme="a" data-role="footer"  data-id="persistent" data-position="fixed">
-				<h4 class="sessionDisp"></h4>
-				<img src="img/logosandglas.png?12" width="84" height="30" class="ui-btn-right" style="margin-top:5px;">
-			</div>
+
+			<!-- <div data-theme="a" data-role="footer"  data-id="persistent" data-position="fixed">
+			<h4 class="sessionDisp"></h4>
+			<img src="img/logosandglas.png?12" width="84" height="30" class="ui-btn-right" style="margin-top:5px;">
+			</div> -->
 		</div>
 		<div id="customPairs" data-role="page" data-transition="pop">
 			<div data-role="header">

@@ -175,10 +175,15 @@
 /* Second breakpoint at 800px */
 /* Adjusts column proportions, tweak base H1 */
 @media all and (min-width: 50em) {
-	#register, #login{
+	.edSessInner {
+		width: 300px;
+		margin: 0 auto;
+		padding: 2% 0;
+	}
+	#register, #login {
 		padding: 5% 0;
 	}
-	#loginContent, #regContent{
+	#loginContent, #regContent {
 		padding: 7% 0;
 	}
 	.mainLogo {
@@ -205,12 +210,10 @@
 	}
 	.logInner, .regInner {
 		width: 235px;
-
 		margin: 2% auto;
 	}
 	.logButton {
 		margin-top: 10px;
-
 	}
 	#errorText {
 		position: absolute;
@@ -219,7 +222,7 @@
 		left: 45%;
 		width: 350px;
 		height: 30px;
-		margin-top:   - 15px;
+		margin-top:    - 15px;
 		margin-left: -78px;
 	}
 	.logInput {
